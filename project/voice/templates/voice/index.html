@@ -7,8 +7,13 @@
     <h1>Text to Speech</h1>
     <form method="post">
         {% csrf_token %}
-        <textarea name="text" rows="10" cols="30"></textarea><br>
+        <textarea name="text" rows="10" cols="30" placeholder="Enter text or click 'Random Word'"></textarea><br>
         <input type="submit" value="Convert to Speech">
+    </form>
+    <form method="post" action="{% url 'text_to_speech' %}">
+        {% csrf_token %}
+        <input type="hidden" name="text" value="">
+        <input type="submit" value="Random Word">
     </form>
 </body>
 </html>
