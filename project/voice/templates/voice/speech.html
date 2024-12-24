@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speech</title>
+</head>
+<body>
+    <h1>Your Speech</h1>
+    <audio controls>
+        <source src="{{ audio_url }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <br>
+    <a href="{% url 'text_to_speech' %}">Convert another text</a>
+</body>
+</html>
